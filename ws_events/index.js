@@ -48,6 +48,16 @@ function reportAttacher(){
 }
 
 function reportUpdater(event) {
-    console.log("x:",screenX,"y:",screenY);
     document.querySelector('#report').textContent = ("x: "+event.screenX+" y: "+event.screenY);
-  } 
+} 
+
+function idValidationAttacher(){
+    const newid = document.querySelector('#newid');
+    newid.addEventListener('input',idValidation);
+}
+
+function idValidation(event){
+    const t = event.target.value.split(" ");
+    const newid = document.querySelector('#newid');
+    t.length > 1 ? newid.classList.add("invalid") : newid.classList.remove("invalid")
+}
