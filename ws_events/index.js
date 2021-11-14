@@ -34,3 +34,10 @@ function out1Handler(){
     console.log(in1.value,in2.value);
     out1.textContent = (in1.value+in2.value);
 }
+
+function snitchAttacher(){
+    const mousewatcher = document.querySelector('#mousewatcher');
+    const snitch = document.querySelector('#snitch');
+    mousewatcher.addEventListener('mouseover',snitchUpdater);
+    mousewatcher.addEventListener('mouseout',snitchUpdater);
+}
