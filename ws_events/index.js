@@ -41,3 +41,13 @@ function snitchAttacher(){
     mousewatcher.addEventListener('mouseover',snitchUpdater);
     mousewatcher.addEventListener('mouseout',snitchUpdater);
 }
+
+function reportAttacher(){
+    const mousereporter = document.querySelector('#mousereporter');
+    mousereporter.addEventListener('mousemove',reportUpdater);
+}
+
+function reportUpdater(event) {
+    console.log("x:",screenX,"y:",screenY);
+    document.querySelector('#report').textContent = ("x: "+event.screenX+" y: "+event.screenY);
+  } 
